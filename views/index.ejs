@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    body,*{
+        margin: 0;
+        padding: 0;
+        
+    }
+    h1{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .box{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .btn{
+        padding: 1rem;
+        border-radius: 1px solid rgba(39, 99, 245, 0.8);
+        background-color: rgba(39, 99, 245, 0.8);
+        color: aliceblue;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <h1>Hello word</h1>
+    <div class="box">
+        <form action="/create" method="post">
+            <button class="btn" type="submit" > Genderate File</button>
+        </form>
+        
+    </div>
+</body>
+<script>
+    const button = document.querySelector('.btn');
+    button.addEventListener('click', function(event) {
+      
+        alert('รอสักครู่');
+    });
+</script>
+</html>

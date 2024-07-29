@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body,*{
+        margin: 0;
+        padding: 0;
+        
+    }
+    h1{
+        text-align: center;
+        margin-top: 20px;
+    }
+    h4{
+        text-align: center;
+        margin-top: 20px;
+    }
+    ul{
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1em;
+      text-align: left;
+      margin: auto;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+</style>
+<body>
+    <h1>Show file</h1>
+    <div class="table">
+        <table>
+            <thead>
+              <tr>
+                <th>Folder</th>
+                <th>Original Size (KB)</th>
+                <th>Compressed Size (KB)</th>
+                <th>Reduction (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% filesInfo.forEach(file => { %>
+                <tr>
+                  <td><%= file.folder %></td>
+                  <td><%= file.originalSize %></td>
+                  <td><%= file.compressedSize %></td>
+                  <td><%= file.reductionPercent %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </div>
+    <h1>Dictionary Words Analysis</h1>
+    <ul>
+      <li>จำนวนคำที่มีความยาวมากกว่า 5 ตัวอักษ: <%= moreThanFive %></li>
+      <li>จำนวนคำที่มีตัวอักษรซ้ำ: <%= repeatingChars %></li>
+      <li>จำนวนคำที่ขึ้นต้นและลงท้ายด้วยตัวอักษรเดียวกัน: <%= sameStartEnd %></li>
+    </ul>
+    <h4>ระบบได้สร้าง PDF ให้คุณแล้ว</h4>
+</body>
+</html>
